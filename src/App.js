@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
+
 
 function App() {
   return (
@@ -10,7 +10,6 @@ function App() {
         <p className='text-black'>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <NavBar/>
         <a
           className="App-link"
           href="https://reactjs.org"
