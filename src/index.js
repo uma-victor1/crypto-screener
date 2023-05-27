@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
 import ErrorPage from './pages/error-page'
+import Crypto from './pages/Crypto'
+import Saved from './pages/Saved'
+import Trending from './pages/Trending'
+import Home from './pages/Home'
 import reportWebVitals from './reportWebVitals'
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -10,8 +14,22 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Home />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/',
+        element: <Crypto />,
+      },
+      {
+        path: '/trending',
+        element: <Trending />,
+      },
+      {
+        path: '/saved',
+        element: <Saved />,
+      }
+    ],
   },
 ])
 
